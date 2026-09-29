@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn tạo Fixed Menu</title>
+    <style>
+        /* ============================================
+           RESET & GLOBAL
+           ============================================ */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ============================================
+           FIXED NAVBAR
+           ============================================ */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: all 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #c9a227;
+            color: #1a2a4a;
+            font-weight: bold;
+        }
+
+        /* ============================================
+           MAIN CONTENT
+           ============================================ */
+        .main {
+            padding: 16px;
+            margin-top: 50px;
+        }
+
+        .main h1 {
+            font-size: 2.2rem;
+            color: #1a2a4a;
+            margin-bottom: 10px;
+        }
+
+        .main h2 {
+            font-size: 1.2rem;
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .main p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        /* ============================================
+           SECTIONS (Để test scroll)
+           ============================================ */
+        .section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #c9a227;
+        }
+
+        .section h3 {
+            color: #1a2a4a;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 576px) {
+            .navbar a {
+                padding: 12px 10px;
+                font-size: 14px;
+            }
+
+            .main h1 {
+                font-size: 1.6rem;
+            }
+
+            .main h2 {
+                font-size: 1rem;
+            }
+
+            .main {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         FIXED NAVBAR
+         ============================================ -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <div class="main">
+
+        <h1>Fixed Top Menu</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+        <!-- SECTION HOME -->
+        <div class="section" id="home">
+            <h3>🏠 Home</h3>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+        </div>
+
+        <!-- SECTION NEWS -->
+        <div class="section" id="news">
+            <h3>📰 News</h3>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+        </div>
+
+        <!-- SECTION CONTACT -->
+        <div class="section" id="contact">
+            <h3>📞 Contact</h3>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+        </div>
+
+        <!-- SECTION ABOUT -->
+        <div class="section" id="about">
+            <h3>ℹ️ About</h3>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+        </div>
+
+        <!-- NỘI DUNG DÀI ĐỂ TEST SCROLL -->
+        <div class="section">
+            <h3>📝 Nội dung mẫu</h3>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+            <p>Some text some text some text some text...</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
